@@ -5,7 +5,6 @@ before_build:
   - nuget restore
 build_script:
   - choco install "msbuild-sonarqube-runner" -y
-  - MSBuild.SonarQube.Runner.exe begin /k:"learnwithmentor-server" /d:"sonar.host.url=https://sonarqube.com" /d:"sonar.login=422b7e86ba596f2972284cf1635032b708dd2c1d"
-  - msbuild "learnwithmentor-server.sln"
+  - MSBuild.SonarQube.Runner.exe begin /d:"sonar.host.url=https://sonarqube.com" /d:"sonar.login=422b7e86ba596f2972284cf1635032b708dd2c1d"
   - MSBuild.SonarQube.Runner.exe end /d:"sonar.login=422b7e86ba596f2972284cf1635032b708dd2c1d"
 
