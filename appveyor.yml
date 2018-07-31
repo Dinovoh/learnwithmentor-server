@@ -1,2 +1,6 @@
+before_build:
+  - nuget restore
+
 version: 1.0.{build}
 image: Visual Studio 2017
+
