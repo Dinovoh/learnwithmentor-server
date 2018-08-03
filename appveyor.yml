@@ -11,4 +11,11 @@ build_script:
   - MsBuild.exe /t:Rebuild
   - SonarScanner.MSBuild.exe end /d:sonar.login="422b7e86ba596f2972284cf1635032b708dd2c1d"
   
+sonar-scanner -Dsonar.analysis.mode=preview \
+              -Dsonar.github.pullRequest=$PULL_REQUEST_ID \
+              -Dsonar.github.repository=myOrganisation/myProject \
+              -Dsonar.github.oauth=$GITHUB_ACCESS_TOKEN \
+              -Dsonar.host.url=https://server/sonarqube \
+              -Dsonar.login=$SONARQUBE_ACCESS_TOKEN
+  
 
