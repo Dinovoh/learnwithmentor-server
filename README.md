@@ -1,4 +1,4 @@
-# learnwithmentor-server
+# :) &Changes in feathure 2 # learnwithmentor-server
 LearnWithMentor is a helper service with plan-based system of learning
 # Requirements
 Microsoft SQL Server 2017 and Visual Studio 2017 are required.
